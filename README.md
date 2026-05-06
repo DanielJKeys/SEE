@@ -1,7 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="SEE Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 # Strategic Executive Engine (SEE)
 
 An AI-augmented enterprise platform that bridges strategy and execution. SEE provides three distinct role-based portals — **Leadership**, **Manager**, and **Imagineer** — each powered by Gemini AI agents to close the gap between organizational vision and operational delivery.
