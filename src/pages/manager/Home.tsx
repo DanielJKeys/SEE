@@ -13,7 +13,8 @@ import {
   ExternalLink,
   Users,
   DollarSign,
-  TrendingUp
+  TrendingUp,
+  Search
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -115,6 +116,10 @@ export default function ManagerHome() {
                  <Button variant="outline" size="sm" className="justify-start text-xs" onClick={() => navigate('/dashboard/progress')}>
                     <TrendingUp size={14} className="mr-2" />
                     Open Progress Dashboard
+                 </Button>
+                 <Button variant="outline" size="sm" className="justify-start text-xs" onClick={() => navigate('/imagineer/discover')}>
+                    <Search size={14} className="mr-2" />
+                    Discover Solutions Marketplace
                  </Button>
                  <Button variant="outline" size="sm" className="justify-start text-xs">
                     <Users size={14} className="mr-2" />

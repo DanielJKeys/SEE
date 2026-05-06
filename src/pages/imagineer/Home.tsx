@@ -18,8 +18,8 @@ export default function ImagineerHome() {
   const { state } = useSEE();
   const navigate = useNavigate();
 
-  // For imagineer Priya Nair (notional)
-  const myTasks = state.projects.flatMap(p => p.tasks).filter(t => t.assignee === 'Priya Nair');
+  // For imagineer Carlos Rivera (notional)
+  const myTasks = state.projects.flatMap(p => p.tasks).filter(t => t.assignee === 'Carlos Rivera');
   const myStats = {
     total: myTasks.length,
     completed: myTasks.filter(t => t.status === 'Complete').length,

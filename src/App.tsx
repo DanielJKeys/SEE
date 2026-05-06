@@ -100,7 +100,7 @@ export default function App() {
                 </RoleGuard>
               } />
               <Route path="/imagineer/discover" element={
-                <RoleGuard allowedRoles={['Imagineer']}>
+                <RoleGuard allowedRoles={['Imagineer', 'Manager', 'Leadership']}>
                   <Discover />
                 </RoleGuard>
               } />

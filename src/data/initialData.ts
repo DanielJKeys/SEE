@@ -146,7 +146,8 @@ export const INITIAL_PROJECTS: Project[] = [
     tasks: [
       { id: "task-001", title: "Data ingestion pipeline setup", assignee: "Priya Nair", status: "Complete", dueDate: "2026-03-15", storyPoints: 8 },
       { id: "task-002", title: "Train baseline classification model", assignee: "Raj Patel", status: "In Progress", dueDate: "2026-06-30", storyPoints: 21 },
-      { id: "task-003", title: "Bias audit and fairness testing", assignee: "Unassigned", status: "Not Started", dueDate: "2026-07-31", storyPoints: 13 }
+      { id: "task-003", title: "Bias audit and fairness testing", assignee: "Unassigned", status: "Not Started", dueDate: "2026-07-31", storyPoints: 13 },
+      { id: "task-009", title: "Scale database clusters for training feedback", assignee: "Carlos Rivera", status: "In Progress", dueDate: "2026-06-15", storyPoints: 8 }
     ],
     metrics: [
       { id: "metric-001", name: "Model Accuracy", linkedKpiId: "kpi-001", currentValue: 89.4, targetValue: 97, unit: "percent", source: "Coupled (notional)", lastUpdated: "2026-05-01" }
@@ -168,7 +169,9 @@ export const INITIAL_PROJECTS: Project[] = [
     },
     tasks: [
       { id: "task-004", title: "API authentication logic", assignee: "Carlos Rivera", status: "Complete", dueDate: "2026-04-10", storyPoints: 5 },
-      { id: "task-005", title: "Legacy system endpoint discovery", assignee: "Carlos Rivera", status: "In Progress", dueDate: "2026-05-20", storyPoints: 13 }
+      { id: "task-005", title: "Legacy system endpoint discovery", assignee: "Carlos Rivera", status: "In Progress", dueDate: "2026-05-20", storyPoints: 13 },
+      { id: "task-010", title: "API caching layer optimization", assignee: "Carlos Rivera", status: "Not Started", dueDate: "2026-07-15", storyPoints: 5 },
+      { id: "task-011", title: "CI/CD deployment script for legacy proxy", assignee: "Carlos Rivera", status: "In Progress", dueDate: "2026-05-25", storyPoints: 8 }
     ],
     metrics: [],
     tags: ["Infrastructure", "Legacy"]
@@ -209,7 +212,8 @@ export const INITIAL_PROJECTS: Project[] = [
       remaining: 190000
     },
     tasks: [
-      { id: "task-008", title: "Define portal architecture", assignee: "Carlos Rivera", status: "Not Started", dueDate: "2026-06-30", storyPoints: 13 }
+      { id: "task-008", title: "Define portal architecture", assignee: "Carlos Rivera", status: "Not Started", dueDate: "2026-06-30", storyPoints: 13 },
+      { id: "task-012", title: "Mobile responsiveness audit for portal", assignee: "Carlos Rivera", status: "Not Started", dueDate: "2026-08-15", storyPoints: 3 }
     ],
     metrics: [],
     tags: ["Infrastructure", "Mobile"]

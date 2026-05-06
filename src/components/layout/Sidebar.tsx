@@ -37,7 +37,7 @@ const navItems: NavItem[] = [
   { label: 'Imagineer Home', path: '/imagineer', icon: LayoutDashboard, roles: ['Imagineer'] },
   { label: 'My Tasks', path: '/imagineer/tasks', icon: CheckSquare, roles: ['Imagineer'] },
   { label: 'Couple Metrics', path: '/imagineer/metrics', icon: TrendingUp, roles: ['Imagineer'] },
-  { label: 'Discover Solutions', path: '/imagineer/discover', icon: Search, roles: ['Imagineer'] },
+  { label: 'Discover Solutions', path: '/imagineer/discover', icon: Search, roles: ['Imagineer', 'Manager', 'Leadership'] },
 ];
 
 export default function Sidebar() {

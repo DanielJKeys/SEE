@@ -15,11 +15,11 @@ import { motion } from 'motion/react';
 export default function MyTasks() {
   const { state, dispatch } = useSEE();
   
-  // Notional: Get tasks for Priya Nair
+  // Notional: Get tasks for Carlos Rivera
   const myProjectTasks = state.projects.map(p => ({
     projectId: p.id,
     projectTitle: p.title,
-    tasks: p.tasks.filter(t => t.assignee === 'Priya Nair')
+    tasks: p.tasks.filter(t => t.assignee === 'Carlos Rivera')
   })).filter(p => p.tasks.length > 0);
 
   const handleToggleTask = (projectId: string, task: any) => {

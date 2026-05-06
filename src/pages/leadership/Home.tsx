@@ -10,7 +10,8 @@ import {
   CheckCircle2, 
   Clock,
   ShieldAlert,
-  ChevronRight
+  ChevronRight,
+  Search
 } from 'lucide-react';
 import { formatCurrency } from '../../lib/utils';
 import { motion } from 'motion/react';
@@ -95,6 +96,28 @@ export default function LeadershipHome() {
                 </Card>
               ))}
             </div>
+          </div>
+
+          {/* Solution Marketplace Link */}
+          <div className="space-y-4 pt-4">
+            <h3 className="font-black text-[#1F3864] uppercase text-xs tracking-widest">Accelerate Execution</h3>
+            <Card 
+              className="bg-blue-50 border-blue-100 hover:border-blue-200 cursor-pointer transition-all group"
+              onClick={() => navigate('/imagineer/discover')}
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-white text-blue-600 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                    <Search size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-black text-[#1F3864] text-sm">Solution Marketplace</h4>
+                    <p className="text-xs text-slate-500 font-medium">Browse pre-vetted technical assets & reusable modules</p>
+                  </div>
+                </div>
+                <ArrowRight className="text-blue-400 group-hover:translate-x-1 transition-transform" size={20} />
+              </div>
+            </Card>
           </div>
         </div>
 
