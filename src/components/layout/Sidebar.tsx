@@ -14,6 +14,7 @@ import {
 import { useSEE } from '../../context/SEEContext';
 import { Role } from '../../types';
 import { cn } from '../../lib/utils';
+import Logo from '../common/Logo';
 
 interface NavItem {
   label: string;
@@ -49,7 +50,7 @@ export default function Sidebar() {
     <aside id="sidebar" className="fixed left-0 top-0 h-full w-64 bg-[#1F3864] text-white flex flex-col z-50">
       <div className="p-6">
         <h1 className="text-2xl font-bold tracking-tighter flex items-center gap-2">
-          <div className="w-8 h-8 bg-white rounded flex items-center justify-center text-[#1F3864]">S</div>
+          <Logo className="w-10 h-10 rounded-2xl" size={24} />
           SEE
         </h1>
         <div className="mt-2 flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full w-fit">

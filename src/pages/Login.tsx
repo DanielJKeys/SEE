@@ -4,6 +4,7 @@ import { useSEE } from '../context/SEEContext';
 import { Role } from '../types';
 import { ShieldCheck, UserCog, Code2 } from 'lucide-react';
 import { motion } from 'motion/react';
+import Logo from '../components/common/Logo';
 
 export default function Login() {
   const { dispatch } = useSEE();
@@ -49,7 +50,7 @@ export default function Login() {
       >
         <div className="space-y-4">
           <div className="inline-flex items-center gap-3 px-4 py-2 bg-white rounded-2xl shadow-sm border border-slate-200">
-            <div className="w-10 h-10 bg-[#1F3864] rounded-xl flex items-center justify-center text-white text-xl font-bold">S</div>
+            <Logo className="w-10 h-10 rounded-xl" size={24} />
             <span className="font-bold text-[#1F3864] text-xl tracking-tight">SEE Platform</span>
           </div>
           <h1 className="text-5xl font-black text-[#1F3864] tracking-tight">
@@ -88,7 +89,7 @@ export default function Login() {
         </div>
 
         <div className="pt-12 text-slate-400 text-sm">
-          <p>© 2026 Pathward Financial • Strategic Executive Engine v1.0 Prototype</p>
+          <p>© 2026 Zyno Engineering • Strategic Executive Engine v1.0 Prototype</p>
         </div>
       </motion.div>
     </div>

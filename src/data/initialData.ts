@@ -1,7 +1,7 @@
 import { Organization, CostData, Plan, Project } from '../types';
 
 export const INITIAL_ORG_DATA: Organization = {
-  name: "Pathward Financial",
+  name: "Zyno Engineering",
   divisions: [
     {
       id: "div-001",
