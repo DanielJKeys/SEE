@@ -193,8 +193,8 @@ export default function ROIDashboard() {
 
          <Card title="KPI Progress Tracking" subtitle="Top Active Indicators" className="lg:col-span-2">
            <div className="space-y-6 pt-4">
-             {state.plans[0].kpis.map((kpi, i) => (
-               <ProgressBar 
+             {(state.plans[0]?.kpis ?? []).map((kpi, i) => (
+               <ProgressBar
                  key={kpi.id}
                  label={kpi.name}
                  value={kpi.current}

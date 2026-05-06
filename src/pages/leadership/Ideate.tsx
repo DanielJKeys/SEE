@@ -79,7 +79,7 @@ export default function Ideate() {
   const handleSavePlan = () => {
     const finalPlan: Plan = {
       ...currentPlan,
-      id: `plan-${Math.floor(Math.random() * 1000)}`,
+      id: `plan-${crypto.randomUUID()}`,
       createdDate: new Date().toISOString().split('T')[0],
       status: 'Active',
       riskAssessment: riskAssessment || undefined

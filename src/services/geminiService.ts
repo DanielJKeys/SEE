@@ -29,7 +29,7 @@ You are the SEE Risk Critic. You receive a strategic plan and must evaluate its 
 
 Return a JSON response with:
 {
-  "riskScore": "Low|Medium|High",
+  "score": "Low|Medium|High",
   "factors": ["..."],
   "mitigations": ["..."],
   "summary": "..."
@@ -84,12 +84,12 @@ export async function evaluateRisk(plan: Plan): Promise<RiskAssessment> {
       responseSchema: {
         type: Type.OBJECT,
         properties: {
-          riskScore: { type: Type.STRING, enum: ["Low", "Medium", "High"] },
+          score: { type: Type.STRING, enum: ["Low", "Medium", "High"] },
           factors: { type: Type.ARRAY, items: { type: Type.STRING } },
           mitigations: { type: Type.ARRAY, items: { type: Type.STRING } },
           summary: { type: Type.STRING }
         },
-        required: ["riskScore", "factors", "mitigations", "summary"]
+        required: ["score", "factors", "mitigations", "summary"]
       }
     },
   });

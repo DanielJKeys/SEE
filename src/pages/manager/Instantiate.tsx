@@ -52,7 +52,7 @@ export default function Instantiate() {
   const handleAcceptProject = (project: Project) => {
     const finalProject = {
       ...project,
-      id: `proj-${Math.floor(Math.random() * 1000)}`,
+      id: `proj-${crypto.randomUUID()}`,
       parentPlanId: initialPlan.id,
       manager: 'James Okafor', // Notional
       status: 'Not Started' as const,

@@ -120,6 +120,7 @@ export interface Project {
   };
   tasks: Task[];
   metrics: Metric[];
+  tags?: string[];
 }
 
 export interface AppState {

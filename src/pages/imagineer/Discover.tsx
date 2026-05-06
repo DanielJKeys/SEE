@@ -16,8 +16,16 @@ import { cn } from '../../lib/utils';
 export default function Discover() {
   const { state } = useSEE();
   const [filter, setFilter] = useState('All');
+  const [search, setSearch] = useState('');
 
   const tags = ['All', 'AI/ML', 'Infrastructure', 'Mobile', 'Automation', 'Legacy'];
+
+  const visibleProjects = state.projects.filter(proj => {
+    const matchesTag = filter === 'All' || (proj.tags ?? []).includes(filter);
+    const q = search.toLowerCase();
+    const matchesSearch = !q || proj.title.toLowerCase().includes(q) || proj.manager.toLowerCase().includes(q);
+    return matchesTag && matchesSearch;
+  });
 
   return (
     <div className="space-y-8 pb-12">
@@ -29,8 +37,10 @@ export default function Discover() {
         
         <div className="relative w-full md:w-96">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
-          <input 
-            type="text" 
+          <input
+            type="text"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
             placeholder="Search documentation, tech stacks, or project tags..."
             className="w-full bg-white border border-slate-200 rounded-2xl pl-12 pr-6 py-3 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/10 focus:border-blue-400 transition-all shadow-sm"
           />
@@ -58,7 +68,12 @@ export default function Discover() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {state.projects.map((proj, i) => (
+        {visibleProjects.length === 0 && (
+          <div className="col-span-3 py-16 text-center text-slate-400 font-bold text-sm">
+            No projects match your search.
+          </div>
+        )}
+        {visibleProjects.map((proj, i) => (
           <Card 
             key={proj.id} 
             className="hover:shadow-xl transition-all border-b-4 border-b-blue-600/10 group cursor-pointer"
@@ -85,9 +100,9 @@ export default function Discover() {
                      This project provides a hardened {proj.title.toLowerCase()} for enterprise integration. Built using standard React and Node.js.
                    </p>
                    <div className="flex flex-wrap gap-2 pt-1">
-                      <span className="px-1.5 py-0.5 bg-blue-50 text-blue-500 text-[9px] font-black rounded uppercase">React</span>
-                      <span className="px-1.5 py-0.5 bg-indigo-50 text-indigo-500 text-[9px] font-black rounded uppercase">TypeScript</span>
-                      <span className="px-1.5 py-0.5 bg-slate-50 text-slate-500 text-[9px] font-black rounded uppercase">Jira Linked</span>
+                      {(proj.tags ?? []).map(tag => (
+                        <span key={tag} className="px-1.5 py-0.5 bg-blue-50 text-blue-500 text-[9px] font-black rounded uppercase">{tag}</span>
+                      ))}
                    </div>
                 </div>
 

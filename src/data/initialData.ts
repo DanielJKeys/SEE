@@ -150,7 +150,8 @@ export const INITIAL_PROJECTS: Project[] = [
     ],
     metrics: [
       { id: "metric-001", name: "Model Accuracy", linkedKpiId: "kpi-001", currentValue: 89.4, targetValue: 97, unit: "percent", source: "Coupled (notional)", lastUpdated: "2026-05-01" }
-    ]
+    ],
+    tags: ["AI/ML"]
   },
   {
     id: "proj-002",
@@ -169,7 +170,8 @@ export const INITIAL_PROJECTS: Project[] = [
       { id: "task-004", title: "API authentication logic", assignee: "Carlos Rivera", status: "Complete", dueDate: "2026-04-10", storyPoints: 5 },
       { id: "task-005", title: "Legacy system endpoint discovery", assignee: "Carlos Rivera", status: "In Progress", dueDate: "2026-05-20", storyPoints: 13 }
     ],
-    metrics: []
+    metrics: [],
+    tags: ["Infrastructure", "Legacy"]
   },
   {
     id: "proj-003",
@@ -190,7 +192,8 @@ export const INITIAL_PROJECTS: Project[] = [
     ],
     metrics: [
       { id: "metric-002", name: "Automation Efficiency", linkedKpiId: "kpi-005", currentValue: 12, targetValue: 40, unit: "percent", source: "Internal Tool", lastUpdated: "2026-04-30" }
-    ]
+    ],
+    tags: ["Automation"]
   },
   {
     id: "proj-004",
@@ -208,6 +211,7 @@ export const INITIAL_PROJECTS: Project[] = [
     tasks: [
       { id: "task-008", title: "Define portal architecture", assignee: "Carlos Rivera", status: "Not Started", dueDate: "2026-06-30", storyPoints: 13 }
     ],
-    metrics: []
+    metrics: [],
+    tags: ["Infrastructure", "Mobile"]
   }
 ];
